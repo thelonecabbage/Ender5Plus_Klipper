@@ -1,0 +1,55 @@
+[gcode_shell_command camera_zoom]
+command = sh /home/justin/shellcmd/zoom.sh
+timeout = 5.0
+verbose = False
+[gcode_shell_command tilt_reset]
+command = sh /home/justin/shellcmd/tilt_reset.sh
+timeout = 5.0
+verbose = False
+[gcode_shell_command tilt_relative]
+command = sh /home/justin/shellcmd/tilt_relative.sh
+timeout = 5.0
+verbose = False
+[gcode_shell_command pan_reset]
+command = sh /home/justin/shellcmd/pan_reset.sh
+timeout = 5.0
+verbose = False
+[gcode_shell_command pan_relative]
+command = sh /home/justin/shellcmd/pan_relative.sh
+timeout = 5.0
+verbose = False
+
+[gcode_macro ZOOM_300]
+gcode:
+    RUN_SHELL_COMMAND CMD=camera_zoom PARAMS=300
+[gcode_macro ZOOM_250]
+gcode:
+    RUN_SHELL_COMMAND CMD=camera_zoom PARAMS=250
+[gcode_macro ZOOM_200]
+gcode:
+    RUN_SHELL_COMMAND CMD=camera_zoom PARAMS=200
+[gcode_macro ZOOM_150]
+gcode:
+    RUN_SHELL_COMMAND CMD=camera_zoom PARAMS=150
+[gcode_macro ZOOM_100]
+gcode:
+    RUN_SHELL_COMMAND CMD=camera_zoom PARAMS=100
+[gcode_macro CAM_TILT_RESET]
+gcode:
+    RUN_SHELL_COMMAND CMD=tilt_reset
+[gcode_macro CAM_UP]
+gcode:
+    RUN_SHELL_COMMAND CMD=tilt_relative PARAMS=-100
+[gcode_macro CAM_DOWN]
+gcode:
+    RUN_SHELL_COMMAND CMD=tilt_relative PARAMS=100
+    
+[gcode_macro CAM_PAN_RESET]
+gcode:
+    RUN_SHELL_COMMAND CMD=pan_reset
+[gcode_macro CAM_RIGHT]
+gcode:
+    RUN_SHELL_COMMAND CMD=pan_relative PARAMS=-100
+[gcode_macro CAM_LEFT]
+gcode:
+    RUN_SHELL_COMMAND CMD=pan_relative PARAMS=100
