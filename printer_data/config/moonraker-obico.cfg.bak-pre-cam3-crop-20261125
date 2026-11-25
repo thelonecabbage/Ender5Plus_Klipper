@@ -1,0 +1,18 @@
+[server]
+url = http://192.168.69.16:3334
+auth_token = 14f34721fb1efeaadbab
+
+[moonraker]
+host = 127.0.0.1
+port = 7125
+
+[webcam Cam2]
+rotation = 0
+disable_video_streaming = False
+
+[logging]
+path = /home/justin/printer_data/logs/moonraker-obico.log
+level = INFO
+
+[tunnel]
+
